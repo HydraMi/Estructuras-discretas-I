@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TextFlow textAlignment="JUSTIFY" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InstructionsController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="654.0">
+          <children>
+              <Label alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="368.0" text="Welcome to Hacker City" textAlignment="CENTER">
+                  <VBox.margin>
+                      <Insets left="157.0" top="15.0" />
+                  </VBox.margin>
+                  <font>
+                      <Font name="Berlin Sans FB" size="30.0" />
+                  </font>
+              </Label>
+            <TextArea editable="false" prefHeight="334.0" prefWidth="654.0" text="Objetivo&#10; - Asume el rol de un hacker estratégico que se infiltra en la red urbana desde su casa.&#10;   Tu misión es hackear los sistemas clave de la ciudad: Bomberos, Policía y Hospital,&#10;   pero antes deberás infiltrarte en casas comunes para ganar experiencia.&#10;   Usa tu ingenio, gestiona tus puntos y avanza con cuidado… ¡el sistema no te lo pondrá fácil!&#10;&#10;Controles&#10; - Click izquierdo: Selecciona el nodo al que deseas hackear.&#10; - Con las teclas A,W,S,D te podras mover por el mapa&#10;&#10;Tipos de Nodos:&#10;- Casas: Nivel de dificultad bajo (1 - 4), ideales para comenzar.&#10;- Edificios urbanos: Nivel medio (5 - 7), otorgan más puntos.&#10;- Objetivos mayores: Bomberos, Policía, Hospital (niveles 8-10), se requiere experiencia previa&#10;   para acceder.&#10;&#10;Mecánica de Hackeo&#10; - Cada nodo tiene una dificultad (1 - 10).&#10; - Hackearlo con éxito te da puntos (más dificultad = más puntos).&#10; - Si tu nivel de hacker es muy bajo frente a la dificultad, hay alta probabilidad de fallo.&#10; - Un nodo solo se puede hackear una vez.&#10; - El orden importa: solo podrás hackear los edificios grandes si ya alcanzaste&#10;   un puntaje mínimo y hackeaste suficientes casas.&#10;&#10;Gestión del Hacker&#10; - Haz clic sobre un nodo para intentar hackearlo.&#10; - Si el nodo está conectado y cumples las condiciones, se inicia el intento.&#10; - Tras cada hackeo exitoso, acumulas puntos y se actualiza tu nivel de hacker.&#10; - Si fallas: pierdes tiempo y algo de puntos, y ese nodo queda bloqueado temporalmente.&#10;&#10;Indicadores en Tiempo Real&#10; - Nivel de hacker&#10; - Puntaje acumulado&#10; - Número de nodos hackeados&#10; - Estado de los objetivos principales&#10; - Ruta actual desde tu casa hasta el siguiente objetivo&#10;&#10;¿Cómo ganar?&#10; - Hackea con éxito los 3 objetivos principales (Bomberos → Policía → Hospital).&#10; - La eficiencia cuenta: entre menos fallos y menos tiempo, más alto tu puntaje final.&#10; - Algunas rutas son más seguras que otras... ¿tomás el camino largo y fácil o el corto y &#10;  arriesgado?&#10;&#10;Advertencias&#10; - No hackees a lo loco: si acumulás muchos fallos, podés quedar bloqueado por el sistema.&#10; - Elegí bien tu camino. Algunas rutas pueden no tener vuelta atrás.&#10; - El sistema se vuelve más alerta a medida que progresás. Cada error cuenta.&#10;&#10;Cuando estés listo…&#10; -Haz clic en &quot;Start Hackeo&quot; y comienza tu ruta desde casa.&#10; -Usá tus habilidades, tu lógica… y no olvides disfrutar el caos controlado.&#10;&#10;">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </TextArea>
+              <Button fx:id="okeyButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#closeWindow" text="Start Hackeo" textAlignment="CENTER">
+                  <font>
+                      <Font name="Berlin Sans FB" size="20.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets left="253.0" top="18.0" />
+                  </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+              </Button>
+          </children>
+      </VBox>
+   </children>
+</TextFlow>
